@@ -7,26 +7,25 @@ class URI
     {
 
         int loop = int.Parse(Console.ReadLine());
-        int dentroDoIntervalo = int.Parse(Console.ReadLine());
-        int foraDoIntervalo = int.Parse(Console.ReadLine());
-       
+
+        int dentro = 0, fora = 0;
+
         for (int i = 0; i < loop; i++)
         {
-            int entrada = int.Parse(Console.ReadLine());
+            int numero = int.Parse(Console.ReadLine());
 
-            if (entrada >= 10 && entrada <= 20)
+            if(numero >= 10 && numero <= 20)
             {
-                dentroDoIntervalo++;
+                dentro++;
             }
-            else
+            else if(numero < 10 || numero > 20)
             {
-                foraDoIntervalo++;
+                fora++;
             }
-
         }
 
-        Console.WriteLine(dentroDoIntervalo + " in");
-        Console.WriteLine(foraDoIntervalo + " out");
+        Console.WriteLine(dentro + " in");
+        Console.WriteLine(fora + " out");
     }
 
 }
